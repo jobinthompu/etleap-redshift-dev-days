@@ -46,11 +46,8 @@ Log into your AWS account and Deploy the CloudFormation Stack by Clicking the bu
 - Make sure the AWS region selected is N. Virginia (us-east-1).
 - Specify a root password of your choice for your Redshift cluster. This must consist of at least 8 alphanumeric characters only, and must contain a lower-case letter, an upper-case letter, and a number.
 - The other fields have sensible defaults, but feel free to modify as you see fit.
-
-After entering the all the parameter values: 
-- Click 'Next'.
-- On the next screen, enter any required tags, an IAM role, or any advanced options, and then click 'Next'.
-- Review the details on the final screen, Check the box for 'I acknowledge that AWS CloudFormation might create IAM resources' and then choose 'Create' to start building the resources.
+- You may update your email address if you wish to receive SNS notifications when stack creation is completed.
+- Review the details on the screen, Check the box for 'I acknowledge that AWS CloudFormation might create IAM resources' and then choose 'Create' to start building the resources.
 - Click 'Create stack' and wait for the creation to complete.
 
 
