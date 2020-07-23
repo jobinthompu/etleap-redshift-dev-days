@@ -50,6 +50,8 @@ Log into your AWS account and Deploy the CloudFormation Stack by Clicking the bu
 - Review the details on the screen, Check the box for 'I acknowledge that AWS CloudFormation might create IAM resources' and then choose 'Create' to start building the resources.
 - Click 'Create stack' and wait for the creation to complete.
 
+![alt tag](https://github.com/jobinthompu/etleap-redshift-dev-days/blob/master/Resources/Images/CreateStack.png)
+
 
 ## 2. Connect Etleap to Redshift and the data sources
 
