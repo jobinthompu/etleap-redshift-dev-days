@@ -1,5 +1,22 @@
 # Build an Amazon Redshift data warehouse with Etleap
 
+[Introduction](https://github.com/jobinthompu/Confluent-Dev-Day#short-introduction)\
+[Prerequisites](https://github.com/jobinthompu/Confluent-Dev-Day#prerequisites)\
+[1. Set up an AWS VPC with Redshift, Glue, and S3](https://github.com/jobinthompu/Confluent-Dev-Day#creating-aws-resources-required-for-redshift-streaming-module)\
+[Creating Confluent Cloud Resources](https://github.com/jobinthompu/Confluent-Dev-Day#creating-confluent-cloud-resources)
+- [Creating a Kafka Cluster](https://github.com/jobinthompu/Confluent-Dev-Day#creating-a-kafka-cluster)
+- [Creating a Kafka Topic](https://github.com/jobinthompu/Confluent-Dev-Day#creating-a-kafka-topic)
+- [Creating Kafka API Keys](https://github.com/jobinthompu/Confluent-Dev-Day#creating-kafka-api-keys)
+- [Enabling Schema Registry for Confluent cloud and Create API Keys](https://github.com/jobinthompu/Confluent-Dev-Day#enabling-schema-registry-for-confluent-cloud-and-create-api-keys)
+- [Configuring Confluent Cloud Redshift Sink Connector](https://github.com/jobinthompu/Confluent-Dev-Day#configuring-confluent-cloud-redshift-sink-connector)
+- [Launching Lambda Streaming function to ingest data into Kafka Topic](https://github.com/jobinthompu/Confluent-Dev-Day#launching-lambda-streaming-function-to-ingest-data-into-kafka-topic)
+- [Preview Data Ingested into Redshift table from Query Editor console](https://github.com/jobinthompu/Confluent-Dev-Day#preview-data-ingested-into-redshift-table-from-console)
+
+[Clean Up](https://github.com/jobinthompu/Confluent-Dev-Day#clean-up)\
+[Conclusion](https://github.com/jobinthompu/Confluent-Dev-Day#conclusion)
+
+## Introduction
+
 Here is the scenario we'll be working through in this workshop. You are a data engineer at DoggySwag, an online retailer of dog products. Your analytics team wants to understand how your customers navigate your website in order to find and buy products, in order to optimize the user experience and increase spending.
 
 User behavior data is available through events that have been captured with a web analytics tool, whereas the customer spend data is stored in your own SQL database. The web analytics tool has a reporting layer that provides user behavior insight, but this doesn't include data about customer spending. Your analysts can run SQL queries against the customer spend data, but can't correlate this with their online behavior data.
@@ -9,7 +26,8 @@ In this workshop you'll learn how to create a Redshift data warehouse that centr
 
 ## Prerequisites
 
-You must have an AWS account and an [AWS Identity and Access Management (IAM)](https://aws.amazon.com/iam/) user with sufficient permissions to interact with the AWS Management Console and creating various resources. Your IAM permissions must also include access to create IAM roles and policies created by the AWS CloudFormation template.
+- You must have an AWS account and an [AWS Identity and Access Management (IAM)](https://aws.amazon.com/iam/) user with sufficient permissions to interact with the AWS Management Console and creating various resources. 
+- Your IAM permissions must also include access to create IAM roles and policies created by the AWS CloudFormation template.
 
 
 ## 1. Set up an AWS VPC with Redshift, Glue, and S3
@@ -22,10 +40,11 @@ In this section we'll set up a new VPC with the following resources:
 - An IAM role that will be assigned to the Redshift cluster and used to access the data lake.
 - An IAM user that will be used by Etleap to access the data lake.
 
-Log into your AWS account and [go to the page to create the stack for this workshop](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateUrl=https%3A%2F%2Fs3.amazonaws.com%2Fetleap-redshift-workshop%2Fcloudformation-templates%2Fcf-template.yaml&stackName=EtleapRedshiftDevDayStack). 
+Log into your AWS account and Deploy the CloudFormation Stack by Clicking the button Below:
+[![Foo](https://github.com/jobinthompu/Confluent-Dev-Day/blob/master/Resources/images/LaunchStack.png)](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateUrl=https%3A%2F%2Fs3.amazonaws.com%2Fetleap-redshift-workshop%2Fcloudformation-templates%2Fcf-template.yaml&stackName=EtleapRedshiftDevDayStack). 
 
 - Make sure the AWS region selected is N. Virginia (us-east-1).
-- Specify a root password for your Redshift cluster. This must consist of at least 8 alphanumeric characters only, and must contain a lower-case letter, an upper-case letter, and a number.
+- Specify a root password of your choice for your Redshift cluster. This must consist of at least 8 alphanumeric characters only, and must contain a lower-case letter, an upper-case letter, and a number.
 - The other fields have sensible defaults, but feel free to modify as you see fit.
 
 After entering the all the parameter values: 
