@@ -7,9 +7,11 @@
 - [2.1 Set up the S3 Input connection](https://github.com/jobinthompu/Confluent-Dev-Day#creating-a-kafka-cluster)
 - [2.2 Set up the MySQL connection](https://github.com/jobinthompu/Confluent-Dev-Day#creating-a-kafka-topic)
 - [2.3 Set up the Redshift connection](https://github.com/jobinthompu/Confluent-Dev-Day#creating-kafka-api-keys)\
+
 [3. Create Etleap ETL pipelines from the sources to Redshift](https://github.com/jobinthompu/Confluent-Dev-Day#enabling-schema-registry-for-confluent-cloud-and-create-api-keys)
 - [3.1 Set up the S3-to-Redshift pipeline](https://github.com/jobinthompu/Confluent-Dev-Day#configuring-confluent-cloud-redshift-sink-connector)
 - [3.2 Set up the MySQL-to-Redshift pipeline](https://github.com/jobinthompu/Confluent-Dev-Day#launching-lambda-streaming-function-to-ingest-data-into-kafka-topic)\
+
 [4. Track ETL progress](https://github.com/jobinthompu/Confluent-Dev-Day#preview-data-ingested-into-redshift-table-from-console)\
 [5. Run queries on Redshift](https://github.com/jobinthompu/Confluent-Dev-Day#preview-data-ingested-into-redshift-table-from-console)\
 [6. Create an Etleap Model](https://github.com/jobinthompu/Confluent-Dev-Day#preview-data-ingested-into-redshift-table-from-console)\
@@ -18,6 +20,7 @@
 - [8.1 Set up the S3 Data Lake connection](https://github.com/jobinthompu/Confluent-Dev-Day#configuring-confluent-cloud-redshift-sink-connector)
 - [8.2 Set up the S3-to-S3/Glue pipeline](https://github.com/jobinthompu/Confluent-Dev-Day#configuring-confluent-cloud-redshift-sink-connector)
 - [8.3 Connect Redshift to Glue Catalog](https://github.com/jobinthompu/Confluent-Dev-Day#configuring-confluent-cloud-redshift-sink-connector)\
+
 [9. Delete the AWS resources](https://github.com/jobinthompu/Confluent-Dev-Day#preview-data-ingested-into-redshift-table-from-console)
 [Conclusion](https://github.com/jobinthompu/Confluent-Dev-Day#conclusion)
 
