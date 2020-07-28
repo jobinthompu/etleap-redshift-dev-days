@@ -47,7 +47,7 @@ In this section we'll set up a new VPC with the following resources:
 - An IAM user that will be used by Etleap to access the data lake.
 
 Log into your AWS account and Deploy the CloudFormation Stack by Clicking the button Below:
-[![Foo](https://github.com/jobinthompu/Confluent-Dev-Day/blob/master/Resources/images/LaunchStack.png)](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateUrl=https%3A%2F%2Fs3.amazonaws.com%2Fetleap-redshift-workshop%2Fcloudformation-templates%2Fcf-template.yaml&stackName=EtleapRedshiftDevDayStack). 
+[![Foo](https://github.com/jobinthompu/etleap-redshift-dev-days/blob/master/Resources/Images/LaunchStack.png)](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateUrl=https%3A%2F%2Fs3.amazonaws.com%2Fetleap-redshift-workshop%2Fcloudformation-templates%2Fcf-template.yaml&stackName=EtleapRedshiftDevDayStack). 
 
 - Make sure the AWS region selected is N. Virginia (us-east-1).
 - Specify a root password of your choice for your Redshift cluster. This must consist of at least 8 alphanumeric characters only, and must contain a lower-case letter, an upper-case letter, and a number.
