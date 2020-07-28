@@ -80,6 +80,9 @@ Set up the S3 Input connection [here](https://app.etleap.com/#/connections/new/S
 
 Click 'Create Connection'.
 
+![alt tag](https://github.com/jobinthompu/etleap-redshift-dev-days/blob/master/Resources/Images/S3Connections.png)
+
+
 ### 2.2. Set up the MySQL connection
 
 Set up the MySQL connection [here](https://app.etleap.com/#/connections/new/MYSQL). Use the following values:
@@ -94,6 +97,8 @@ Set up the MySQL connection [here](https://app.etleap.com/#/connections/new/MYSQ
 - Additional properties: Leave as their defaults.
 
 Click 'Create Connection'
+
+![alt tag](https://github.com/jobinthompu/etleap-redshift-dev-days/blob/master/Resources/Images/MySQLConnections.png)
 
 ### 2.3. Set up the Redshift connection
 
