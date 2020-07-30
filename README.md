@@ -169,7 +169,7 @@ In this section we'll configure pipelines that will ETL data from the sources in
 ## 4. Track ETL progress
 
 Etleap is now ETL'ing the data from the sources to Redshift. This will take 5-10 minutes. You can monitor progress [here](https://app.etleap.com/#/activities). Once you see events saying 'Website Events loaded successfully' and 'purchases loaded successfully' you can proceed to the next section.
-  ![alt tag](https://github.com/jobinthompu/etleap-redshift-dev-days/blob/master/Resources/Images/ETLprogress.png)
+  ![alt tag](https://github.com/jobinthompu/etleap-redshift-dev-days/blob/master/Resources/Images/Etlprogress.png)
 
 
 ## 5. Run queries on Redshift
