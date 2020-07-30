@@ -134,10 +134,15 @@ In this section we'll configure pipelines that will ETL data from the sources in
 - Pick 'Website Events' as the source.
 - This page lists the files and folders available in S3. Click the radio button in the top-left to select the top-level directory.
 - Click 'Wrangle Data'.
+![alt tag](https://github.com/jobinthompu/etleap-redshift-dev-days/blob/master/Resources/Images/s3Pipeline.png)
+
 - Wrangle the data. 
   - The JSON object should already be parsed by the wrangler, and each key is a column.
   - The `timestamp` column needs to be loaded as a `datetime` object in the warehouse. Click on the column header. On the right hand side, the Wrangler will suggest "Interpret `timestamp` as date and time...". Select the option, then click "Add".
+  	![alt tag](https://github.com/jobinthompu/etleap-redshift-dev-days/blob/master/Resources/Images/editS3Pipeline01.png)
   - Select the `ip` column header, and the Wrangler will suggest the "Look up geolocation..." transform. Select it, and click "Add".
+  	![alt tag](https://github.com/jobinthompu/etleap-redshift-dev-days/blob/master/Resources/Images/editS3Pipeline02.png)
+
 - Click 'Next'.
 - Pick 'Amazon Redshift' as the destination.
 - Specify the following destination values:
@@ -145,6 +150,8 @@ In this section we'll configure pipelines that will ETL data from the sources in
   - Pipeline name: `Website Events`
 - Click 'Next'.
 - Click 'Start ETLing'.
+  	![alt tag](https://github.com/jobinthompu/etleap-redshift-dev-days/blob/master/Resources/Images/startS3Pipeline.png)
+
 
 ### 3.2. Set up the MySQL-to-Redshift pipeline
 
@@ -152,15 +159,17 @@ In this section we'll configure pipelines that will ETL data from the sources in
 - Pick 'Webstore' as the source.
 - Select all the tables.
 - Click 'Next'.
+  	![alt tag](https://github.com/jobinthompu/etleap-redshift-dev-days/blob/master/Resources/Images/mysqlPipeline.png)
 - Leave the settings as they are
 - Pick 'Amazon Redshift' as the destination.
 - Leave all the options as their defaults in this step and click 'Next'.
 - Click 'Start ETLing'.
-
+  	![alt tag](https://github.com/jobinthompu/etleap-redshift-dev-days/blob/master/Resources/Images/StartMysqlPipeline.png)
 
 ## 4. Track ETL progress
 
 Etleap is now ETL'ing the data from the sources to Redshift. This will take 5-10 minutes. You can monitor progress [here](https://app.etleap.com/#/activities). Once you see events saying 'Website Events loaded successfully' and 'purchases loaded successfully' you can proceed to the next section.
+  ![alt tag](https://github.com/jobinthompu/etleap-redshift-dev-days/blob/master/Resources/Images/ETLprogress.png)
 
 
 ## 5. Run queries on Redshift
