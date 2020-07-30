@@ -108,17 +108,17 @@ For this setup you'll need the values from your CloudFormation stack. These are 
 
 Set up the Redshift connection [here](https://app.etleap.com/#/connections/new/REDSHIFT). 
 
-| Key	        		| Value         													| 
+| Property	        	| Value         													| 
 | ----------------------|:-----------------------------------------------------------------:| 
-| Name      			| `Amazon Redshift`													| 
-| Connection Method     | Direct      														|  
-| Address 				| `RedshiftClusterHostnameOutput` from your CloudFormation output	| 
-| Port			 		| `5439`	      													| 
-| Username			 	| `root`      														| 
-| Password			 	| `RedshiftClusterPasswordOutput` from your CloudFormation output	| 
-| Database 				| `warehouse`      													| 
-| Schema 				| `public`      													| 
-| Additional properties | Leave as their defaults     										| 
+| Name      			|`Amazon Redshift`													| 
+| Connection Method     |`Direct`     														|  
+| Address 				|`RedshiftClusterHostnameOutput` from your CloudFormation output	| 
+| Port			 		|`5439`	      														| 
+| Username			 	|`root`      														| 
+| Password			 	|`RedshiftClusterPasswordOutput` from your CloudFormation output	| 
+| Database 				|`warehouse`      													| 
+| Schema 				|`public`      														| 
+| Additional properties |Leave as defaults     												| 
 
 - Leave the name as 
 - Connection Method: Direct
