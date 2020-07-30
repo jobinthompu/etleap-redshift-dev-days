@@ -122,7 +122,7 @@ Set up the Redshift connection [here](https://app.etleap.com/#/connections/new/R
 
 Click 'Create Connection'.
 
-	![alt tag](https://github.com/jobinthompu/etleap-redshift-dev-days/blob/master/Resources/Images/RedshiftConnection.png)
+   ![alt tag](https://github.com/jobinthompu/etleap-redshift-dev-days/blob/master/Resources/Images/RedshiftConnection.png)
 
 ## 3. Create Etleap ETL pipelines from the sources to Redshift
 
