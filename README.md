@@ -7,19 +7,21 @@
 	2.1 [Set up the S3 Input connection](https://github.com/jobinthompu/etleap-redshift-dev-days#21-set-up-the-s3-input-connection)\
 	2.2	[Set up the MySQL connection](https://github.com/jobinthompu/etleap-redshift-dev-days#22-set-up-the-mysql-connection)\
 	2.3 [Set up the Redshift connection](https://github.com/jobinthompu/etleap-redshift-dev-days#23-set-up-the-redshift-connection)\
-[3. Create Etleap ETL pipelines from the sources to Redshift](https://github.com/jobinthompu/etleap-redshift-dev-days#3-create-etleap-etl-pipelines-from-the-sources-to-redshift)\
-[3.1.	Set up the S3-to-Redshift pipeline](https://github.com/jobinthompu/etleap-redshift-dev-days#31-set-up-the-s3-to-redshift-pipeline)\
-[3.2.	Set up the MySQL-to-Redshift pipeline](https://github.com/jobinthompu/etleap-redshift-dev-days#32-set-up-the-mysql-to-redshift-pipeline)\
-[4. Track ETL progress](https://github.com/jobinthompu/etleap-redshift-dev-days#4-track-etl-progress)\
-[5. Run queries on Redshift](https://github.com/jobinthompu/etleap-redshift-dev-days#5-run-queries-on-redshift)\
-[6. Create an Etleap Model](https://github.com/jobinthompu/etleap-redshift-dev-days#6-create-an-etleap-model)\
-[7. Run queries against this model](https://github.com/jobinthompu/etleap-redshift-dev-days#7-run-queries-against-this-model)\
-[8. Create Etleap ETL pipelines from the sources to S3 and Glue Catalog](https://github.com/jobinthompu/etleap-redshift-dev-days#8-create-etleap-etl-pipelines-from-the-sources-to-s3-and-glue-catalog)\
-   	[8.1 Set up the S3 Data Lake connection](https://github.com/jobinthompu/etleap-redshift-dev-days#81-set-up-the-s3-data-lake-connection)\
-   	[8.2 Set up the S3-to-S3/Glue pipeline](https://github.com/jobinthompu/etleap-redshift-dev-days#82-set-up-the-s3-to-s3glue-pipeline)\
-   	[8.3 Connect Redshift to Glue Catalog](https://github.com/jobinthompu/etleap-redshift-dev-days#83-connect-redshift-to-glue-catalog)\
-[9. Delete the AWS resources](https://github.com/jobinthompu/etleap-redshift-dev-days#9-delete-the-aws-resources)\
-[Conclusion](https://github.com/jobinthompu/etleap-redshift-dev-days#10-conclusion)
+		
+3. [Create Etleap ETL pipelines from the sources to Redshift](https://github.com/jobinthompu/etleap-redshift-dev-days#3-create-etleap-etl-pipelines-from-the-sources-to-redshift)\
+	3.1	[Set up the S3-to-Redshift pipeline](https://github.com/jobinthompu/etleap-redshift-dev-days#31-set-up-the-s3-to-redshift-pipeline)\
+	3.2 [Set up the MySQL-to-Redshift pipeline](https://github.com/jobinthompu/etleap-redshift-dev-days#32-set-up-the-mysql-to-redshift-pipeline)\
+
+4. [Track ETL progress](https://github.com/jobinthompu/etleap-redshift-dev-days#4-track-etl-progress)\
+5. [Run queries on Redshift](https://github.com/jobinthompu/etleap-redshift-dev-days#5-run-queries-on-redshift)\
+6. [Create an Etleap Model](https://github.com/jobinthompu/etleap-redshift-dev-days#6-create-an-etleap-model)\
+7. [Run queries against this model](https://github.com/jobinthompu/etleap-redshift-dev-days#7-run-queries-against-this-model)\
+8. [Create Etleap ETL pipelines from the sources to S3 and Glue Catalog](https://github.com/jobinthompu/etleap-redshift-dev-days#8-create-etleap-etl-pipelines-from-the-sources-to-s3-and-glue-catalog)\
+	8.1 [Set up the S3 Data Lake connection](https://github.com/jobinthompu/etleap-redshift-dev-days#81-set-up-the-s3-data-lake-connection)\
+	8.2 [Set up the S3-to-S3/Glue pipeline](https://github.com/jobinthompu/etleap-redshift-dev-days#82-set-up-the-s3-to-s3glue-pipeline)\
+    8.3 [Connect Redshift to Glue Catalog](https://github.com/jobinthompu/etleap-redshift-dev-days#83-connect-redshift-to-glue-catalog)\
+9. [Delete the AWS resources](https://github.com/jobinthompu/etleap-redshift-dev-days#9-delete-the-aws-resources)\
+10. [Conclusion](https://github.com/jobinthompu/etleap-redshift-dev-days#10-conclusion)
 
 ## Introduction
 
