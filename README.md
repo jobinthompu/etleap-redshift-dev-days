@@ -56,7 +56,7 @@ Log into your AWS account and Deploy the CloudFormation Stack by Clicking the bu
 - Review the details on the screen, Check the box for 'I acknowledge that AWS CloudFormation might create IAM resources' and then choose 'Create' to start building the resources.
 - Click 'Create stack' and wait for the creation to complete.
 
-![alt tag](https://github.com/jobinthompu/etleap-redshift-dev-days/blob/master/Resources/Images/CreateCFStack.png)
+   ![alt tag](https://github.com/jobinthompu/etleap-redshift-dev-days/blob/master/Resources/Images/CreateCFStack.png)
 
 
 ## 2. Connect Etleap to Redshift and the data sources
@@ -80,7 +80,7 @@ Set up the S3 Input connection [here](https://app.etleap.com/#/connections/new/S
 
 Click 'Create Connection'.
 
-![alt tag](https://github.com/jobinthompu/etleap-redshift-dev-days/blob/master/Resources/Images/S3Connections.png)
+   ![alt tag](https://github.com/jobinthompu/etleap-redshift-dev-days/blob/master/Resources/Images/S3Connections.png)
 
 
 ### 2.2. Set up the MySQL connection
@@ -98,13 +98,13 @@ Set up the MySQL connection [here](https://app.etleap.com/#/connections/new/MYSQ
 
 Click 'Create Connection'
 
-![alt tag](https://github.com/jobinthompu/etleap-redshift-dev-days/blob/master/Resources/Images/MySQLConnections.png)
+   ![alt tag](https://github.com/jobinthompu/etleap-redshift-dev-days/blob/master/Resources/Images/MySQLConnections.png)
 
 ### 2.3. Set up the Redshift connection
 
 For this setup you'll need the values from your CloudFormation stack. These are available on the **Outputs** tab in the [Stack Info page](https://console.aws.amazon.com/cloudformation/home?region=us-east-1). 
 
-![alt tag](https://github.com/jobinthompu/etleap-redshift-dev-days/blob/master/Resources/Images/CloudFormationOutput.png)
+   ![alt tag](https://github.com/jobinthompu/etleap-redshift-dev-days/blob/master/Resources/Images/CloudFormationOutput.png)
 
 Set up the Redshift connection [here](https://app.etleap.com/#/connections/new/REDSHIFT). 
 - Leave the name as `Amazon Redshift`
@@ -122,7 +122,7 @@ Set up the Redshift connection [here](https://app.etleap.com/#/connections/new/R
 
 Click 'Create Connection'.
 
-![alt tag](https://github.com/jobinthompu/etleap-redshift-dev-days/blob/master/Resources/Images/RedshiftConnection.png)
+	![alt tag](https://github.com/jobinthompu/etleap-redshift-dev-days/blob/master/Resources/Images/RedshiftConnection.png)
 
 ## 3. Create Etleap ETL pipelines from the sources to Redshift
 
@@ -134,7 +134,7 @@ In this section we'll configure pipelines that will ETL data from the sources in
 - Pick 'Website Events' as the source.
 - This page lists the files and folders available in S3. Click the radio button in the top-left to select the top-level directory.
 - Click 'Wrangle Data'.
-![alt tag](https://github.com/jobinthompu/etleap-redshift-dev-days/blob/master/Resources/Images/s3Pipeline.png)
+	![alt tag](https://github.com/jobinthompu/etleap-redshift-dev-days/blob/master/Resources/Images/s3Pipeline.png)
 
 - Wrangle the data. 
   - The JSON object should already be parsed by the wrangler, and each key is a column.
