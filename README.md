@@ -107,7 +107,20 @@ For this setup you'll need the values from your CloudFormation stack. These are 
    ![alt tag](https://github.com/jobinthompu/etleap-redshift-dev-days/blob/master/Resources/Images/CloudFormationOutput.png)
 
 Set up the Redshift connection [here](https://app.etleap.com/#/connections/new/REDSHIFT). 
-- Leave the name as `Amazon Redshift`
+
+| Key	        		| Value         													| 
+| ----------------------|:-----------------------------------------------------------------:| 
+| Name      			| `Amazon Redshift`													| 
+| Connection Method     | Direct      														|  
+| Address 				| `RedshiftClusterHostnameOutput` from your CloudFormation output	| 
+| Port			 		| `5439`	      													| 
+| Username			 	| `root`      														| 
+| Password			 	| `RedshiftClusterPasswordOutput` from your CloudFormation output	| 
+| Database 				| `warehouse`      													| 
+| Schema 				| `public`      													| 
+| Additional properties | Leave as their defaults     										| 
+
+- Leave the name as 
 - Connection Method: Direct
 - Connection Information:
   - Address: Use the 'Value' of 'RedshiftClusterHostnameOutput' from your CloudFormation stack. Make sure you remove any whitespace at the end of the input.
@@ -327,7 +340,7 @@ Set up the S3 Data Lake connection [here](https://app.etleap.com/#/connections/n
   - Name the policy `etleap_data_lake` and click "Create"
   - Find the policy in the list, check it, and click "Next: Tags"
   - Under the "Tags" page, click "Next: Review"
-  - Name the role `etleap_data_late` and click "Create"
+  - Name the role `etleap_data_lake` and click "Create"
   - Once the role is created, select it in the list, and copy the "Role ARN". This is the value you need for the DataLake Connection.
 - For the bucket, use the `S3DataLakeBucket` output from your CloudFormation stack. Make sure you remove any whitespace at the end of the input.
 - Leave the base directory as '/'.
