@@ -104,6 +104,8 @@ Click 'Create Connection'
 
 For this setup you'll need the values from your CloudFormation stack. These are available on the **Outputs** tab in the [Stack Info page](https://console.aws.amazon.com/cloudformation/home?region=us-east-1). 
 
+![alt tag](https://github.com/jobinthompu/etleap-redshift-dev-days/blob/master/Resources/Images/CloudFormationOutput.png)
+
 Set up the Redshift connection [here](https://app.etleap.com/#/connections/new/REDSHIFT). 
 - Leave the name as `Amazon Redshift`
 - Connection Method: Direct
@@ -119,6 +121,8 @@ Set up the Redshift connection [here](https://app.etleap.com/#/connections/new/R
 - Additional properties: Leave as their defaults.
 
 Click 'Create Connection'.
+
+![alt tag](https://github.com/jobinthompu/etleap-redshift-dev-days/blob/master/Resources/Images/RedshiftConnection.png)
 
 ## 3. Create Etleap ETL pipelines from the sources to Redshift
 
