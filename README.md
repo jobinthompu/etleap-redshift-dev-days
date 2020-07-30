@@ -87,14 +87,16 @@ Click 'Create Connection'.
 
 Set up the MySQL connection [here](https://app.etleap.com/#/connections/new/MYSQL). Use the following values:
 
-- Name: `Webstore`
-- Connection Method: Direct
-- Address: `test.dev.etleap.com`
-- Port: `3306`
-- Username: `etl`
-- Password: `@1O3$zH$BYpug5LGi^5b`
-- Database: `mv_webstore`
-- Additional properties: Leave as their defaults.
+| Property	        	| Value         		| 
+| ----------------------|:---------------------:| 
+| Name      			|`Webstore`				| 
+| Connection Method     |`Direct`     			|  
+| Address 				|`test.dev.etleap.com` 	| 
+| Port			 		|`3306`	      			| 
+| Username			 	|`etl`      			| 
+| Password			 	|`@1O3$zH$BYpug5LGi^5b`	| 
+| Database 				|`mv_webstore`      	| 
+| Additional properties |Leave as defaults     	| 
 
 Click 'Create Connection'
 
@@ -119,19 +121,6 @@ Set up the Redshift connection [here](https://app.etleap.com/#/connections/new/R
 | Database 				|`warehouse`      													| 
 | Schema 				|`public`      														| 
 | Additional properties |Leave as defaults     												| 
-
-- Leave the name as 
-- Connection Method: Direct
-- Connection Information:
-  - Address: Use the 'Value' of 'RedshiftClusterHostnameOutput' from your CloudFormation stack. Make sure you remove any whitespace at the end of the input.
-  - Port: `5439`
-- Authentication:
-  - Username: `root`
-  - Password: Use the 'Value' of 'RedshiftClusterPasswordOutput' from your CloudFormation stack.
-- Database properties:
-  - Database: `warehouse`
-  - Schema: `public`
-- Additional properties: Leave as their defaults.
 
 Click 'Create Connection'.
 
