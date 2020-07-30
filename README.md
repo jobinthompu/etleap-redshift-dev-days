@@ -2,11 +2,11 @@
 
 [Introduction](https://github.com/jobinthompu/etleap-redshift-dev-days#introduction)\
 [Prerequisites](https://github.com/jobinthompu/etleap-redshift-dev-days#prerequisites)\
-[1.	Set up an AWS VPC with Redshift, Glue, and S3](https://github.com/jobinthompu/etleap-redshift-dev-days#1-set-up-an-aws-vpc-with-redshift-glue-and-s3)\
-[2. Connect Etleap to Redshift and the data sources](https://github.com/jobinthompu/etleap-redshift-dev-days#2-connect-etleap-to-redshift-and-the-data-sources)\
-[	2.1 Set up the S3 Input connection](https://github.com/jobinthompu/etleap-redshift-dev-days#21-set-up-the-s3-input-connection)\
-[	2.2	Set up the MySQL connection](https://github.com/jobinthompu/etleap-redshift-dev-days#22-set-up-the-mysql-connection)\
-[	2.3	Set up the Redshift connection](https://github.com/jobinthompu/etleap-redshift-dev-days#23-set-up-the-redshift-connection)\
+1. [Set up an AWS VPC with Redshift, Glue, and S3](https://github.com/jobinthompu/etleap-redshift-dev-days#1-set-up-an-aws-vpc-with-redshift-glue-and-s3)\
+2. [Connect Etleap to Redshift and the data sources](https://github.com/jobinthompu/etleap-redshift-dev-days#2-connect-etleap-to-redshift-and-the-data-sources)\
+	2.1 [Set up the S3 Input connection](https://github.com/jobinthompu/etleap-redshift-dev-days#21-set-up-the-s3-input-connection)\
+	2.2	[Set up the MySQL connection](https://github.com/jobinthompu/etleap-redshift-dev-days#22-set-up-the-mysql-connection)\
+	2.3 [Set up the Redshift connection](https://github.com/jobinthompu/etleap-redshift-dev-days#23-set-up-the-redshift-connection)\
 [3. Create Etleap ETL pipelines from the sources to Redshift](https://github.com/jobinthompu/etleap-redshift-dev-days#3-create-etleap-etl-pipelines-from-the-sources-to-redshift)\
 [3.1.	Set up the S3-to-Redshift pipeline](https://github.com/jobinthompu/etleap-redshift-dev-days#31-set-up-the-s3-to-redshift-pipeline)\
 [3.2.	Set up the MySQL-to-Redshift pipeline](https://github.com/jobinthompu/etleap-redshift-dev-days#32-set-up-the-mysql-to-redshift-pipeline)\
