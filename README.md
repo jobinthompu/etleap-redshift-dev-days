@@ -76,16 +76,9 @@ Set up the S3 Input connection [here](https://app.etleap.com/#/connections/new/S
 | ----------------------|:------------------------------------------------:| 
 | Name      			|`Website Events`								   | 
 | IAM Role:     		|`arn:aws:iam::525618399791:role/devdays_20200715` |  
-| Data Bucket 			|``etleap-redshift-devdays` 					   | 
+| Data Bucket 			|`etleap-redshift-devdays` 					   	   | 
 | Base Directory		|`events`	      								   | 
 | Additional properties |Leave as defaults     							   | 
-
-
-- Name: `Website Events`
-- IAM Role: `arn:aws:iam::525618399791:role/devdays_20200715`
-- Data Bucket: `etleap-redshift-devdays`
-- Base Directory: `events`
-- Additional Properties: Leave as their defaults.
 
 Click 'Create Connection'.
 
