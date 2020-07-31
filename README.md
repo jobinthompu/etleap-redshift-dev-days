@@ -209,6 +209,8 @@ LIMIT 10;
 ```
 - Click 'Run'.
 
+  ![alt tag](https://github.com/jobinthompu/etleap-redshift-dev-days/blob/master/Resources/Images/TableQuery.png)
+
 The above query takes a while to return the expected results.
 Let's see if we can improve on this with a Materialized View.
 
@@ -228,8 +230,9 @@ WHERE u.external_id = e.external_id
 GROUP BY u.id;
 ```
 
+ - Click `Validate & Next`
  - Select 'Materialized View' and click 'Next'
- - Name the table as `logins_by_user` and click 'Next'.
+ - Name the table as `logins_by_user`, leave everything else as default and click 'Next'.
  - Finally, click 'Create Model' and you created a new materialized view in Etleap!
 
  The model model will take a few minutes to create.
@@ -254,6 +257,7 @@ GROUP BY s.user_id
 ORDER BY spend_by_login desc
 LIMIT 10;
 ```
+  ![alt tag](https://github.com/jobinthompu/etleap-redshift-dev-days/blob/master/Resources/Images/MVQuery.png)
 
 As you can see, this time the query ran considerably faster the before.
 This is the power of Materialized Views.
