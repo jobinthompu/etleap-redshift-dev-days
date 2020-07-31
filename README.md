@@ -221,6 +221,7 @@ Now that all the data is in Redshift, let's create a model to speed up the runti
  - Click the 'Create' button in the top nav-bar in Etleap.
  - Pick 'Amazon Redshift' as the source.
  - Select 'Model'
+  ![alt tag](https://github.com/jobinthompu/etleap-redshift-dev-days/blob/master/Resources/Images/CreateModel01.png)
  - In the query editor enter the following query:
 
 ```
@@ -234,6 +235,8 @@ GROUP BY u.id;
  - Select 'Materialized View' and click 'Next'
  - Name the table as `logins_by_user`, leave everything else as default and click 'Next'.
  - Finally, click 'Create Model' and you created a new materialized view in Etleap!
+
+  ![alt tag](https://github.com/jobinthompu/etleap-redshift-dev-days/blob/master/Resources/Images/CreateModel02.png)
 
  The model model will take a few minutes to create.
  Once it is created, you can go on to next step.
