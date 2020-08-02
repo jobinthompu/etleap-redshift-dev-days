@@ -89,16 +89,16 @@ Click 'Create Connection'.
 
 Set up the MySQL connection [here](https://app.etleap.com/#/connections/new/MYSQL). Use the following values:
 
-| Property	        	| Value         		| 
-| ----------------------|:---------------------:| 
-| Name      			|`Webstore`				| 
-| Connection Method     |`Direct`     			|  
-| Address 				|`test.dev.etleap.com` 	| 
-| Port			 		|`3306`	      			| 
-| Username			 	|`etl`      			| 
-| Password			 	|`@1O3$zH$BYpug5LGi^5b`	| 
-| Database 				|`mv_webstore`      	| 
-| Additional properties |Leave as defaults     	| 
+| Property	        	| Value         									| 
+| ----------------------|:-------------------------------------------------:| 
+| Name      			|`Webstore`											| 
+| Connection Method     |`Direct`     										|  
+| Address 				|`MySQLInstanceId` from your CloudFormation output	| 
+| Port			 		|`3306`	      										| 
+| Username			 	|`etluser`      									| 
+| Password			 	|`Password123`										| 
+| Database 				|`mv_webstore`      								| 
+| Additional properties |Leave as defaults     								| 
 
 Click 'Create Connection'
 
