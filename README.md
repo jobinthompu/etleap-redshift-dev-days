@@ -292,13 +292,16 @@ This is similar to the S3-to-Redshift pipeline, except this time the destination
 - Pick 'Website Events' as the source.
 - This page lists the files and folders available in S3. Click the radio button in the top-left to select the top-level directory.
 - Click 'Skip Wrangling'.
+ ![alt tag](https://github.com/jobinthompu/etleap-redshift-dev-days/blob/master/Resources/Images/GluePipeline1.png)
 - Select the script from the 'Website Events' pipeline and click 'Next'.
+ ![alt tag](https://github.com/jobinthompu/etleap-redshift-dev-days/blob/master/Resources/Images/GluePipeline2.png)
 - Select `Amazon S3 Data Lake` as the destination.
 - Specify the following destination values:
   - Table name: `Website_Events`
   - Pipeline name: `Website Events - Lake`
 - Click 'More destination options' and select 'Parquet' as the output format.
 - Click 'Start ETLing'.
+ ![alt tag](https://github.com/jobinthompu/etleap-redshift-dev-days/blob/master/Resources/Images/GluePipeline3.png)
 
 ### 8.3. Connect Redshift to Glue Catalog
 
