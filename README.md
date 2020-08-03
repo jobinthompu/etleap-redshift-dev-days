@@ -75,7 +75,7 @@ Set up the S3 Input connection [here](https://app.etleap.com/#/connections/new/S
 | Property	        	| Value         								   | 
 | ----------------------|:------------------------------------------------:| 
 | Name      			|`Website Events`								   | 
-| IAM Role:     		|`arn:aws:iam::525618399791:role/devdays_20200715` |  
+| IAM Role:     		|`arn:aws:iam::525618399791:role/amazonjobin`	   |  
 | Data Bucket 			|`etleap-redshift-devdays` 					   	   | 
 | Base Directory		|`events`	      								   | 
 | Additional properties |Leave as defaults     							   | 
@@ -307,8 +307,8 @@ This is similar to the S3-to-Redshift pipeline, except this time the destination
 
 Now for the fun part - we're going to use Redshift Spectrum to query data stored both in Redshift and S3 in the same query. First we need to hook up Redshift to Glue Catalog:
 
-- Go to the [Redshift query editor](https://console.aws.amazon.com/redshift/home?region=us-east-1#query:).
-- Replace the `DataLakeIAMUser` and `RedshiftSpectrumIAMRole` output from your CloudFormation stack in the query below and execute it.
+- Go to the [Redshift query editor](https://console.aws.amazon.com/redshiftv2/home?region=us-east-1#query-editor:).
+- Replace the `GlueCatalogDBName` and `RedshiftSpectrumIAMRole` output from your CloudFormation stack in the query below and execute it.
 
 ```
 CREATE external SCHEMA spectrumdb
@@ -316,6 +316,7 @@ FROM data catalog DATABASE '<GlueCatalogDBName>'
 IAM_ROLE '<RedshiftSpectrumIAMRole>'
 CREATE external DATABASE if not exists;
 ```
+ ![alt tag](https://github.com/jobinthompu/etleap-redshift-dev-days/blob/master/Resources/Images/CreateSpectrum.png)
 
 - Now we're ready to execute the query. Let's use the same query as before, but now using the data in S3 instead. The only difference in this query is the 'spectrumdb.' prefix in the from-clause in the clicks_per_user common table expression.
 
