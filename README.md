@@ -275,76 +275,14 @@ In this section we'll configure pipelines that will ETL data from the sources in
 Set up the S3 Data Lake connection [here](https://app.etleap.com/#/connections/new/S3_DATA_LAKE). Use the following values:
 
 - Leave the name as `Amazon S3 Data Lake`
-- Create an IAM Role
-  - Go to the IAM Role section of the AWS Console [here](https://console.aws.amazon.com/iam/home?region=us-east-1#/roles)
-  - Click "Create Role"
-  - Select "Another AWS account"
-  - Under Account ID enter: `223848809711`
-  - Select the "Require External ID" checkbox, and enter the `devdaysfivetwentyeight`.
-  - Click "Next" and on the next page click create policy, select the JSON tab, and enter the following policy
-
-```
-{
-    "Version": "2012-10-17",
-    "Statement": [
-    {
-        "Effect": "Allow",
-        "Action": [
-            "s3:GetObject",
-            "s3:ListBucket"
-        ],
-        "Resource":[
-            "arn:aws:s3:::etleap-redshift-devdays-intermediate/output/*"
-        ]
-    },
-    {
-        "Effect": "Allow",
-        "Action": "s3:ListBucket",
-        "Resource": "arn:aws:s3:::etleap-redshift-devdays-intermediate",
-        "Condition": {"StringLike":{"s3:prefix":"output*"}}
-    },
-    {
-        "Effect": "Allow",
-        "Action": [
-            "s3:GetObject",
-            "s3:PutObject",
-            "s3:DeleteObject"
-        ],
-        "Resource":[
-            "arn:aws:s3:::etleap-redshift-workshop-lake-*"
-        ]
-    },
-    {
-	"Effect": "Allow",
-	"Action": "s3:ListBucket",
-	"Resource": "arn:aws:s3:::etleap-redshift-workshop-lake-*",
-	"Condition": {"StringLike":{"s3:prefix":"*"}}
-    }, 
-    {
-        "Effect": "Allow",
-        "Action": [
-            "glue:CreateTable",
-            "glue:UpdateTable",
-            "glue:DeleteTable",
-            "glue:BatchCreatePartition",
-            "glue:GetPartitions"
-        ],
-        "Resource": [
-            "*"
-        ]
-    }]
-}
-```
-  - Name the policy `etleap_data_lake` and click "Create"
-  - Find the policy in the list, check it, and click "Next: Tags"
-  - Under the "Tags" page, click "Next: Review"
-  - Name the role `etleap_data_lake` and click "Create"
-  - Once the role is created, select it in the list, and copy the "Role ARN". This is the value you need for the DataLake Connection.
+- For the Data Lake IAM Role, use the `DataLakeRoleARN` output from your CloudFormation stack. Make sure you remove any whitespace at the end of the input.
 - For the bucket, use the `S3DataLakeBucket` output from your CloudFormation stack. Make sure you remove any whitespace at the end of the input.
 - Leave the base directory as '/'.
 - For the Glue database, use the `GlueCatalogDBName` output from your CloudFormation stack. Make sure you remove any whitespace at the end of the input.
 - For the Glue catalog region, specify 'us-east-1'.
 - Click 'Create Connection'. Click 'Ignore and Continue' for the warning about not having data in the input path.
+
+ ![alt tag](https://github.com/jobinthompu/etleap-redshift-dev-days/blob/master/Resources/Images/CreateDataLake.png)
 
 ### 8.2. Set up the S3-to-S3/Glue pipeline
 
