@@ -45,6 +45,9 @@ In this section we'll set up a new VPC with the following resources:
 - A Glue Catalog database to store data lake metadata.
 - An IAM role that will be assigned to the Redshift cluster and used to access the data lake.
 - An IAM user that will be used by Etleap to access the data lake.
+- An IAM role that will be assigned to the S3 Data cluster and used to access the data lake.
+- A MySQL RDS Instance with Data Required to complete the workshop
+
 
 Log into your AWS account and Deploy the CloudFormation Stack by Clicking the button Below:
 [![Foo](https://github.com/jobinthompu/etleap-redshift-dev-days/blob/master/Resources/Images/LaunchStack.png)](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateUrl=https://cloudformation-template-repo.s3.amazonaws.com/ETLeapWorkshop.json&stackName=EtleapRedshiftDevDayStack). 
