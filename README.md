@@ -337,7 +337,7 @@ GROUP BY s.external_id
 ORDER BY spend_by_login desc
 LIMIT 10;
 ```
-
+ ![alt tag](https://github.com/jobinthompu/etleap-redshift-dev-days/blob/master/Resources/Images/SpectrumQueryResult.png)
 
 ## 9. Delete the AWS resources
 
