@@ -19,7 +19,7 @@
 	8.2 [Set up the S3-to-S3/Glue pipeline](https://github.com/jobinthompu/etleap-redshift-dev-days#82-set-up-the-s3-to-s3glue-pipeline)\
     8.3 [Connect Redshift to Glue Catalog](https://github.com/jobinthompu/etleap-redshift-dev-days#83-connect-redshift-to-glue-catalog)
 9. [Delete the AWS resources](https://github.com/jobinthompu/etleap-redshift-dev-days#9-delete-the-aws-resources)\
-[Conclusion](https://github.com/jobinthompu/etleap-redshift-dev-days#10-conclusion)
+[Conclusion](https://github.com/jobinthompu/etleap-redshift-dev-days#conclusion)
 
 ## Introduction
 
