@@ -95,7 +95,7 @@ Set up the MySQL connection [here](https://app.etleap.com/#/connections/new/MYSQ
 | Connection Method     |`Direct`     										|  
 | Address 				|`MySQLInstanceId` from your CloudFormation output	| 
 | Port			 		|`3306`	      										| 
-| Username			 	|`etluser`      									| 
+| Username			 	|`etleapuser`      									| 
 | Password			 	|`Password123`										| 
 | Database 				|`mv_webstore`      								| 
 | Additional properties |Leave as defaults     								| 
@@ -323,15 +323,15 @@ CREATE external DATABASE if not exists;
 ```
 WITH spend_per_user AS (
   SELECT u.external_id, SUM(i.price) AS spend
-  FROM purchase p 
-    INNER JOIN line_item li ON li.purchase_id = p.id
-    INNER JOIN item i ON i.item_id = li.item_id
-    INNER JOIN user u ON p.User_id = u.Id
+  FROM public.purchase p 
+    INNER JOIN public.line_item li ON li.purchase_id = p.id
+    INNER JOIN public.item i ON i.item_id = li.item_id
+    INNER JOIN public.user u ON p.User_id = u.id
   GROUP BY u.external_id
 )
 SELECT s.external_id, SUM(s.spend)/COUNT(e.external_id) AS spend_by_login
   FROM spend_per_user s
-  INNER JOIN user u ON u.external_id = s.external_id
+  INNER JOIN public.user u ON u.external_id = s.external_id
   INNER JOIN spectrumdb.Website_Events e ON e.external_id = u.external_id
 GROUP BY s.external_id
 ORDER BY spend_by_login desc
