@@ -354,4 +354,4 @@ This will take few minutes to delete all the resources.
 
 ## Conclusion
 
-As part of this workshop, you deployed an Amazon Redshift cluster and other resources using cloudformation, created S3, Redshift and Mysql connections in ETLeap, created multiple pipelines in ETLeap, created and ETLeap Materialized view model and ran queries against that model. You also did created a pipeline to setup s3 datalake connections to create Glue catalog tables and use them to run Redshift federated queries to join data stored in s3 as well as in Redshift.
+As part of this workshop, you deployed an Amazon Redshift cluster and other resources using cloudformation, created S3, Redshift and Mysql connections in Etleap, created multiple pipelines in Etleap, created and Etleap Materialized view model and ran queries against that model. You also did created a pipeline to setup s3 datalake connections to create Glue catalog tables and use them to run Redshift federated queries to join data stored in s3 as well as in Redshift.
