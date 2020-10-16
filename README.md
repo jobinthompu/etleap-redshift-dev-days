@@ -78,7 +78,7 @@ Set up the S3 Input connection [here](https://app.etleap.com/#/connections/new/S
 | Property	        	| Value         								   | 
 | ----------------------|:------------------------------------------------:| 
 | Name      			|`Website Events`								   | 
-| IAM Role:     		|`arn:aws:iam::525618399791:role/amazonjobin`	   |  
+| IAM Role:     		|`arn:aws:iam::525618399791:role/Immersion_Days`   |  
 | Data Bucket 			|`etleap-redshift-devdays` 					   	   | 
 | Base Directory		|`events`	      								   | 
 | Additional properties |Leave as defaults     							   | 
