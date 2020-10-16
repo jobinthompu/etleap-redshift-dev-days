@@ -25,14 +25,14 @@
 
 Here is the scenario we'll be working through in this workshop. You are a data engineer at DoggySwag, an online retailer of dog products. Your analytics team wants to understand how your customers navigate your website in order to find and buy products, in order to optimize the user experience and increase spending.
 
-User behavior data is available through events that have been captured with a web analytics tool, whereas the customer spend data is stored in your own SQL database. The web analytics tool has a reporting layer that provides user behavior insight, but this doesn't include data about customer spending. Your analysts can run SQL queries against the customer spend data, but can't correlate this with their online behavior data.
+User behavior data is available through events that have been captured with a web analytics tool, whereas the customer spend data is stored in your own SQL database. The web analytics tool has a reporting layer that provides user behavior insights, but this doesn't include data about customer spending. Your analysts can run SQL queries against the customer spend data, but can't correlate this with their online behavior data.
 
-In this workshop you'll learn how to create a Redshift data warehouse that centralizes data from both these data sources. This way your analysts can run queries across the data sets.
+In this workshop you'll learn how to create a Redshift data warehouse that centralizes data from both data sources. This way your analysts can run queries across both data sets.
 
 
 ## Prerequisites
 
-- You must have an AWS account and an [AWS Identity and Access Management (IAM)](https://aws.amazon.com/iam/) user with sufficient permissions to interact with the AWS Management Console and creating various resources. 
+- You must have an AWS account and an [AWS Identity and Access Management (IAM)](https://aws.amazon.com/iam/) user with sufficient permissions to interact with the AWS Management Console and create various resources. 
 - Your IAM permissions must also include access to create IAM roles and policies created by the AWS CloudFormation template.
 
 
@@ -64,7 +64,7 @@ Log into your AWS account and Deploy the CloudFormation Stack by Clicking the bu
 
 ## 2. Connect Etleap to Redshift and the data sources
 
-We'll ETL data from two different data sources into your Redshift data warehouse. One source, an S3 bucket, contains JSON-formatted click event data. The other, a MySQL database, contains information about users. 
+We'll ETL data from two different data sources into your Redshift data warehouse. The first source, an S3 bucket, contains JSON-formatted click event data. The second source, a MySQL database, contains information about users. 
 
 The first thing you'll need to do is log into Etleap using the credentials that were provided to you via email. The email has the subject line 'Your Etleap Account'.
 
@@ -133,7 +133,7 @@ Click 'Create Connection'.
 
 ## 3. Create Etleap ETL pipelines from the sources to Redshift
 
-In this section we'll configure pipelines that will ETL data from the sources into the Redshift database.
+In this section we'll configure pipelines that will ETL data from s3 and MySQL sources into the Redshift database.
 
 ### 3.1. Set up the S3-to-Redshift pipeline
 
@@ -302,7 +302,7 @@ This is similar to the S3-to-Redshift pipeline, except this time the destination
 - Specify the following destination values:
   - Table name: `Website_Events`
   - Pipeline name: `Website Events - Lake`
-- Click 'More destination options' and select 'Parquet' as the output format.
+- Click 'More destination options' and make sure 'Parquet' is the output format [It is set to 'Parquet' by default].
 - Click 'Start ETLing'.
  ![alt tag](https://github.com/jobinthompu/etleap-redshift-dev-days/blob/master/Resources/Images/GluePipeline3.png)
 
@@ -354,4 +354,4 @@ This will take few minutes to delete all the resources.
 
 ## Conclusion
 
-As part of this workshop, you deployed an Amazon Redshift cluster and other resources using cloudformation, created S3, Redshift and Mysql connections in Etleap, created multiple pipelines in Etleap, created and Etleap Materialized view model and ran queries against that model. You also did created a pipeline to setup s3 datalake connections to create Glue catalog tables and use them to run Redshift federated queries to join data stored in s3 as well as in Redshift.
+As part of this workshop, you deploy an Amazon Redshift cluster using CloudFormation. You also deployed Etleap inside your own VPC, create S3, MySQL Redshift connections and set up multiple pipelines. You create a Redshift Materialized View through an Etleap Model and ran queries against that model. You also create an S3 data lake, set up a pipeline to load data into the lake and used Redshift Spectrum to run federated queries that joined data stored in S3 and in Redshift. 
