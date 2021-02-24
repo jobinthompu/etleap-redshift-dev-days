@@ -1,4 +1,4 @@
-# Build an Amazon Redshift data warehouse with Etleap
+# Build an Amazon Redshift Data Warehouse with Etleap
 
 [Introduction](https://github.com/jobinthompu/etleap-redshift-dev-days#introduction)\
 [Prerequisites](https://github.com/jobinthompu/etleap-redshift-dev-days#prerequisites)
